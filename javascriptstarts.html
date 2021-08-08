@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    
+
+    <script>
+
+//     const container = document.createElement('div');
+
+
+// const card = document.createElement('img');
+// card.src="https://restcountries.eu/data/deu.svg";
+// card.style.width="250px";
+
+
+
+// const text_info = document.createElement('div');//container div
+
+
+// const card_text = document.createElement('h2');
+// card_text.innerText ="Germany";
+// card_text.style.fontFamily="sans-serif";
+
+// const para1 = document.createElement('p');
+// para1.innerText ="Population : 81,770,900";
+
+// const para2 = document.createElement('p');
+// para2.innerText ="Region : Europe";
+
+// const para3 = document.createElement('p');
+// para3.innerText ="Capital : Berin";
+// text_info.style.padding="0px 10px 20px 20px";
+
+// text_info.append(card_text,para1,para2,para3);
+
+
+// container.append(card,text_info);
+
+
+
+
+// document.body.style.backgroundColor="grey";
+// container.style.backgroundColor="white";
+// container.style.borderRadius="10px";
+// container.style.overflow="hidden";
+// container.style.width="250px";
+// document.body.append(container);
+
+
+
+
+var data = [
+    {
+    "name": "Germany",
+    "polution":"81,770,900",
+    "Region" : "Europe",
+    "Capital" : "Berin",
+    "flag": "https://restcountries.eu/data/deu.svg"
+    },
+    {
+    "name": "United States of America",
+    "polution":"323,947,000",
+    "Region" : "Americas",
+    "Capital" : "Washington. D.C",
+    "flag": "https://restcountries.eu/data/usa.svg"
+    },
+    {
+    "name": "Brazil",
+    "polution":"206,135,893",
+    "Region" : "Americas",
+    "Capital" : "Brasila",
+    "flag": "https://restcountries.eu/data/bra.svg"
+
+
+    },
+    {
+    "name": "Iceland",
+    "polution":"334,300",
+    "Region" : "Europe",
+    "Capital" : "Reykjavík",
+    "flag": "https://restcountries.eu/data/isl.svg"
+
+    }
+
+];
+
+
+
+
+for(var i=0;i<5;i++)
+{
+
+const container = document.createElement('div');
+container.style.marginBottom="50px";
+
+
+const card = document.createElement('img');
+card.src= data[i].flag;
+card.style.width="300px";
+
+
+
+const text_info = document.createElement('div');//container div
+
+
+const card_text = document.createElement('h2');
+card_text.innerText = data[i].name;
+card_text.style.fontFamily="sans-serif";
+
+const para1 = document.createElement('p');
+para1.innerHTML =`<Strong>Polution:</Strong> ${data[i].polution}`;
+para1.style.fontFamily="sans-serif";
+
+const para2 = document.createElement('p');
+para2.innerHTML =`<Strong>Region:</Strong> ${data[i].Region}`;
+para2.style.fontFamily="sans-serif";
+
+const para3 = document.createElement('p');
+para3.innerHTML =`<Strong>Captial:</Strong> ${data[i].Capital}`;
+para3.style.fontFamily="sans-serif";
+text_info.style.padding="0px 10px 20px 20px";
+
+text_info.append(card_text,para1,para2,para3);
+
+
+container.append(card,text_info);
+
+
+
+
+document.body.style.backgroundColor="";
+container.style.backgroundColor="white";
+container.style.boxShadow="0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19)";
+container.style.borderRadius="10px";
+container.style.overflow="hidden";
+container.style.width="300px";
+document.body.append(container);
+}
+
+
+
+// for(var j=0;j<5;j++)
+// {
+//     document.write(data[j].name);
+// }
+    </script>
+</body>
+</html>
