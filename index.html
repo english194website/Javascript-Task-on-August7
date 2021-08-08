@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript</title>
+    <style>
+        body{
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
     
@@ -16,7 +24,7 @@
 
 // const card = document.createElement('img');
 // card.src="https://restcountries.eu/data/deu.svg";
-// card.style.width="250px";
+// card.style.width="300px";
 
 
 
@@ -24,7 +32,12 @@
 
 
 // const card_text = document.createElement('h2');
-// card_text.innerText ="Germany";
+// card_text.innerText="Germany";
+// // text_info.innerHTML =
+// // `<h2>Germany</h2>
+// // <p>Population : 81,770,900</p>
+// // <p>Region : Europe"</p>
+// // <p>Capital : Berin</p>`;
 // card_text.style.fontFamily="sans-serif";
 
 // const para1 = document.createElement('p');
@@ -42,7 +55,7 @@
 
 // container.append(card,text_info);
 
-
+    
 
 
 // document.body.style.backgroundColor="grey";
@@ -53,26 +66,30 @@
 // document.body.append(container);
 
 
+// ${country.country}
+// ${country.poplution}
+// ${country.Region}
+// ${country.Capital}
 
 
 var data = [
     {
     "name": "Germany",
-    "polution":"81,770,900",
+    "Population":"81,770,900",
     "Region" : "Europe",
     "Capital" : "Berin",
     "flag": "https://restcountries.eu/data/deu.svg"
     },
     {
     "name": "United States of America",
-    "polution":"323,947,000",
+    "Population":"323,947,000",
     "Region" : "Americas",
     "Capital" : "Washington. D.C",
     "flag": "https://restcountries.eu/data/usa.svg"
     },
     {
     "name": "Brazil",
-    "polution":"206,135,893",
+    "Population":"206,135,893",
     "Region" : "Americas",
     "Capital" : "Brasila",
     "flag": "https://restcountries.eu/data/bra.svg"
@@ -81,7 +98,7 @@ var data = [
     },
     {
     "name": "Iceland",
-    "polution":"334,300",
+    "Population":"334,300",
     "Region" : "Europe",
     "Capital" : "Reykjavík",
     "flag": "https://restcountries.eu/data/isl.svg"
@@ -91,7 +108,7 @@ var data = [
 ];
 
 
-
+// const box = document.createElement('div');
 
 for(var i=0;i<5;i++)
 {
@@ -114,7 +131,7 @@ card_text.innerText = data[i].name;
 card_text.style.fontFamily="sans-serif";
 
 const para1 = document.createElement('p');
-para1.innerHTML =`<Strong>Polution:</Strong> ${data[i].polution}`;
+para1.innerHTML =`<Strong>Population:</Strong> ${data[i].Population}`;
 para1.style.fontFamily="sans-serif";
 
 const para2 = document.createElement('p');
@@ -133,8 +150,17 @@ container.append(card,text_info);
 
 
 
+// display: flex;
+//             gap: 1rem;
+//             flex-wrap: wrap;
+// document.body.style.backgroundColor="";
+document.body.style.display="flex";
+document.body.style.gap="1rem";
+document.body.style.flexWrap="wrap";
+document.body.style.justifyContent="space-between";
 
-document.body.style.backgroundColor="";
+container.style.flexWrap="wrap";
+container.style.flexDirection="row";
 container.style.backgroundColor="white";
 container.style.boxShadow="0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19)";
 container.style.borderRadius="10px";
@@ -142,6 +168,9 @@ container.style.overflow="hidden";
 container.style.width="300px";
 document.body.append(container);
 }
+// box.style.display="flex";
+// document.body.append(container);
+
 
 
 
